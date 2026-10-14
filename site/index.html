@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>POWERBANK — Power, perfected.</title>
+<meta name="description" content="A refined power bank designed for modern everyday life. Compact power, intelligent design, built to keep your essentials moving." />
+<meta name="theme-color" content="#050607" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23050607'/%3E%3Ccircle cx='16' cy='16' r='7' fill='%23F47A32'/%3E%3C/svg%3E" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ═══════════════ LOADER ═══════════════ -->
+<div id="loader" aria-hidden="true">
+  <div class="loader-inner">
+    <p class="loader-label">POWERING THE EXPERIENCE</p>
+    <p class="loader-count"><span id="loader-pct">00</span><span class="loader-pct-unit">%</span></p>
+    <div class="loader-bar"><div id="loader-fill"></div></div>
+    <p class="loader-frames">SEQUENCE <span id="loader-frames">000 / 240</span></p>
+  </div>
+</div>
+
+<!-- ═══════════════ NAV ═══════════════ -->
+<header id="nav">
+  <a class="brand" href="#stage" data-goto="0.02">
+    <span class="brand-dot"></span>POWER<span class="brand-thin">BANK</span>
+  </a>
+  <nav>
+    <a href="#stage" data-goto="0.02">Overview</a>
+    <a href="#stage" data-goto="0.22">Engineering</a>
+    <a href="#stage" data-goto="0.50">Power</a>
+    <a href="#stage" data-goto="0.68">Design</a>
+    <a href="#specs" data-goto="specs">Specs</a>
+  </nav>
+  <a href="#stage" class="nav-cta" data-goto="0.97">Get Yours</a>
+</header>
+
+<!-- ═══════════════ SCROLL STAGE ═══════════════ -->
+<main id="stage" data-frames="240">
+
+  <div class="sticky">
+    <canvas id="seq" aria-hidden="true" role="presentation"></canvas>
+
+    <!-- real-time 3D canvas (appended by scene.js when WebGL is available) -->
+
+    <!-- subtle technical grid -->
+    <div class="stage-grid"></div>
+
+    <!-- ambient overlay for readability -->
+    <div class="stage-vignette"></div>
+
+    <!-- ── 01 · HERO ── -->
+    <section class="copy hero" data-in="0.00" data-out="0.12">
+      <p class="eyebrow">POWER BANK &middot; PORTABLE ENERGY</p>
+      <h1 class="display">Power,<br />perfected.</h1>
+      <p class="lede">Compact power. Intelligent design.<br />Built to keep your essentials moving.</p>
+      <div class="hero-hint"><span class="hint-line"></span>Scroll to explore</div>
+    </section>
+
+    <!-- ── 02 · ENGINEERING ── -->
+    <section class="copy left" data-in="0.17" data-out="0.36">
+      <p class="eyebrow">01 &middot; Engineering</p>
+      <h2 class="headline">Built from<br />the inside out.</h2>
+      <p class="body">Every layer has a purpose. From the energy cells to the control electronics, each component is designed to work together in a compact, dependable system.</p>
+      <p class="body subtle">Power, protection, and portability — engineered into one refined form.</p>
+    </section>
+
+    <!-- ── 03 · POWER ── -->
+    <section class="copy right" data-in="0.40" data-out="0.58">
+      <p class="eyebrow">02 &middot; Power</p>
+      <h2 class="headline">Power,<br />without the bulk.</h2>
+      <p class="body">Designed to deliver dependable energy while staying compact enough to travel with you.</p>
+      <ul class="points">
+        <li>Compact energy architecture</li>
+        <li>Intelligent power management</li>
+        <li>Designed for everyday mobility</li>
+      </ul>
+    </section>
+
+    <!-- ── 04 · INTERFACE ── -->
+    <section class="copy left" data-in="0.62" data-out="0.74">
+      <p class="eyebrow">03 &middot; Interface</p>
+      <h2 class="headline">Know your power<br />at a glance.</h2>
+      <p class="body">A clean front interface keeps essential power information visible without unnecessary complexity.</p>
+    </section>
+
+    <!-- ── 05 · PORTABILITY ── -->
+    <section class="copy center" data-in="0.76" data-out="0.86">
+      <p class="eyebrow">04 &middot; Portability</p>
+      <h2 class="headline">Made to move.</h2>
+      <p class="body">From long days away from an outlet to everyday commutes, keep essential devices powered wherever the day takes you.</p>
+    </section>
+
+    <!-- ── 06 · REASSEMBLY (visual only, no copy) ── -->
+
+    <!-- ── 07 · FINAL CTA ── -->
+    <section class="copy final" data-in="0.94" data-out="1.01">
+      <p class="eyebrow">Ready when you are</p>
+      <h2 class="display">Power up.<br />Keep moving.</h2>
+      <p class="lede">A refined power bank designed for modern everyday life.</p>
+      <div class="final-actions">
+        <a href="#stage" class="btn btn-primary" data-goto="0.97">Get Yours</a>
+        <a href="#specs" class="btn btn-ghost" data-goto="specs">Explore Specs</a>
+      </div>
+      <p class="microcopy">Compact. Connected. Ready when you are.</p>
+    </section>
+
+    <!-- ── Technical labels ── -->
+    <div class="tech-labels">
+      <span class="label l1" data-in="0.30" data-out="0.58">01 &mdash; Energy Core</span>
+      <span class="label l2" data-in="0.34" data-out="0.58">02 &mdash; Power Management</span>
+      <span class="label l3" data-in="0.38" data-out="0.64">03 &mdash; Display Module</span>
+      <span class="label l4" data-in="0.42" data-out="0.64">04 &mdash; Control Interface</span>
+      <span class="label l5" data-in="0.46" data-out="0.60">05 &mdash; Charging Port</span>
+      <span class="label l6" data-in="0.50" data-out="0.58">06 &mdash; Outer Housing</span>
+    </div>
+
+    <!-- ── Rotate hint (WebGL mode) ── -->
+    <div class="rotate-hint" id="rotate-hint" aria-hidden="true"><span class="hint-line"></span>Drag to rotate</div>
+
+    <!-- ── Frame / progress chrome ── -->
+    <div class="stage-chrome">
+      <div class="frame-readout"><span id="frame-cur">001</span> / <span id="frame-total">240</span></div>
+      <div class="time-readout" id="time-readout">00:00.0</div>
+      <div class="progress-track"><div id="progress-fill"></div></div>
+    </div>
+  </div>
+
+</main>
+
+<!-- ═══════════════ SPECS ═══════════════ -->
+<section id="specs">
+  <div class="specs-inner">
+    <header class="specs-head">
+      <p class="eyebrow">Specifications</p>
+      <h2 class="headline light">Big power.<br />Tiny body.</h2>
+      <p class="body muted-wide">Every detail earns its place. A portable power system designed to disappear into your day.</p>
+    </header>
+    <div class="spec-grid">
+      <div class="spec-card"><span class="spec-no">01</span><h3>Built-in cable</h3><p>A braided cable that lives with the power bank — always attached, never left behind.</p></div>
+      <div class="spec-card"><span class="spec-no">02</span><h3>Digital display</h3><p>Live charge level shown directly on the front control panel.</p></div>
+      <div class="spec-card"><span class="spec-no">03</span><h3>Charge port</h3><p>A single USB charging port for power in and power out.</p></div>
+      <div class="spec-card"><span class="spec-no">04</span><h3>One-touch power</h3><p>A circular control button wakes the display and begins charging.</p></div>
+      <div class="spec-card"><span class="spec-no">05</span><h3>Compact shell</h3><p>Rounded, pocketable housing with a warm orange finish.</p></div>
+      <div class="spec-card"><span class="spec-no">06</span><h3>Protection suite</h3><p>Layered safeguards keep charging safe, stable, and controlled.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ FOOTER ═══════════════ -->
+<footer id="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="brand-dot"></span>POWER<span class="brand-thin">BANK</span>
+    </div>
+    <p class="footer-tag">Power, perfected.</p>
+    <div class="footer-links">
+      <a href="#stage" data-goto="0.02">Overview</a>
+      <a href="#specs" data-goto="specs">Specs</a>
+      <a href="#stage" data-goto="0.97">Get Yours</a>
+    </div>
+    <p class="footer-note">&copy; <span id="year"></span> POWERBANK. Designed &amp; engineered for modern everyday life.</p>
+  </div>
+</footer>
+
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+    "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+  }
+}
+</script>
+<script src="js/main.js"></script>
+</body>
+</html>
